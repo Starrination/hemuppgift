@@ -21,8 +21,8 @@ public class DemoApplication implements CommandLineRunner {
 	}
 
 	private static void menuSelection () {
-        System.out.println("\nHUVUDMENY\n");
-        System.out.println("1. Add new");
+        System.out.println("\nHUVUDMENY\n" );
+        System.out.println("1. Add new ");
         System.out.println("2. Update player?");
         System.out.println("3. List all");
         System.out.println("100. Exit");
@@ -38,7 +38,7 @@ public class DemoApplication implements CommandLineRunner {
     }
 
 	private static Player addPlayer () {
-        System.out.println("Name:");
+        System.out.println("Name: ");
         String name = System.console().readLine();
         System.out.println("Jersey: ");
         int jersey = Integer.parseInt(System.console().readLine());
