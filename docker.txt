@@ -1,0 +1,39 @@
+
+
+
+
+doker pull mariadb
+
+docker run --name mariadb02 -e "MYSQL_ROOT_PASSWORD"=hejsan123 -d mariadb
+
+docker exec -it mariadb02 bash
+
+mysql -uroot -p  
+
+create database testdatabasen;
+
+use testdatabasen;
+
+CREATE TABLE IF NOT EXISTS player (id, jersey VARCHAR(3), name VARCHAR(50), age);  
+
+CREATE TABLE IF NOT EXISTS player (id int, jersey VARCHAR(3), name VARCHAR(50), age int);  
+
+
+INSERT INTO player (jersey, name) values ('1', 'Lars');
+
+
+-- Efter 
+docker start mariadb02
+
+docker stop mariadb02
+
+
+
+docker run -d --name mariadb03 -e "MYSQL_ROOT_PASSWORD"=hejsan123 -p 3306:3306 mariadb 
+
+docker exec -it mariadb03 bash
+
+-- Efter 
+docker start mariadb02
+
+docker stop mariadb02
